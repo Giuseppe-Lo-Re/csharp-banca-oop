@@ -47,7 +47,7 @@ if (sceltaUtente.Equals("si"))
     switch (sceltaUtente)
     {
         case "1":
-            AggiungiCliente(banca);
+            AggiungiCliente();
             break;
         case "2":
             ModificaCliente(banca);
@@ -55,7 +55,11 @@ if (sceltaUtente.Equals("si"))
         case "3":
             RicercaCliente(banca);
             break;
-       
+        case "4":
+            RegistraPrestito(banca);
+        case "7":
+            InfoCliente();
+
         default:
             break;
 
@@ -143,3 +147,20 @@ void RicercaCliente(Banca banca)
     }
 }
 
+void RegistraPrestito(Banca banca)
+{
+    Console.WriteLine("Inserire il codice fiscale del cliente a cui registrare il nuovo prestito");
+    
+    if(Cliente != null)
+    {
+        Console.WriteLine("Inserire L'importo del prestito");
+        int importoPrestito = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Inserire L'importo della rata del prestito");
+        int importoRata = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Inserire La data dell'inizio del prestito");
+        DateOnly dataInizio =
+        Console.WriteLine("Inserire La data della fine del prestito");
+        DateOnly dataFine =
+        
+    }
+}
